@@ -44,6 +44,12 @@
     },
     {
       "path": "./apps/ihire-interview/tsconfig.spec.json"
+    },
+    {
+      "path": "./apps/ihire-talent/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/ihire-talent/tsconfig.spec.json"
     }
   ]
 }
