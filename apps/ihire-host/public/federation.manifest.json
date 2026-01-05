@@ -1,3 +1,4 @@
 {
-  "ihire-dashboard": "http://localhost:4201/remoteEntry.json"
+  "ihire-dashboard": "http://localhost:4201/remoteEntry.json",
+  "ihire-requisition": "http://localhost:4202/remoteEntry.json"
 }

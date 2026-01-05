@@ -4,7 +4,7 @@
   "cli": {
     "packageManager": "npm"
   },
-  "newProjectRoot": "projects",
+  "newProjectRoot": "apps",
   "projects": {
     "ihire-host": {
       "projectType": "application",
@@ -202,6 +202,106 @@
           "defaultConfiguration": "development",
           "options": {
             "port": 4201
+          }
+        }
+      }
+    },
+    "ihire-requisition": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/ihire-requisition",
+      "sourceRoot": "apps/ihire-requisition/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-architects/native-federation:build",
+          "options": {},
+          "configurations": {
+            "production": {
+              "target": "ihire-requisition:esbuild:production"
+            },
+            "development": {
+              "target": "ihire-requisition:esbuild:development",
+              "dev": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-architects/native-federation:build",
+          "options": {
+            "target": "ihire-requisition:serve-original:development",
+            "rebuildDelay": 500,
+            "dev": true,
+            "cacheExternalArtifacts": false,
+            "port": 0
+          }
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        },
+        "esbuild": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "apps/ihire-requisition/src/main.ts",
+            "tsConfig": "apps/ihire-requisition/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "apps/ihire-requisition/public"
+              }
+            ],
+            "styles": ["apps/ihire-requisition/src/styles.scss"],
+            "polyfills": ["es-module-shims"]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ihire-requisition/src/environments/environment.ts",
+                  "with": "apps/ihire-requisition/src/environments/environment.prod.ts"
+                }
+              ],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-original": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "ihire-requisition:esbuild:production"
+            },
+            "development": {
+              "buildTarget": "ihire-requisition:esbuild:development"
+            }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 4202
           }
         }
       }

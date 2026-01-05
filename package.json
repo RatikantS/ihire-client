@@ -10,7 +10,8 @@
     "start": "ng serve",
     "start:host": "ng serve ihire-host",
     "start:dashboard": "ng serve ihire-dashboard",
-    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\"",
+    "start:requisition": "ng serve ihire-requisition",
+    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\" \"npm run start:requisition\"",
     "build": "ng build",
     "test": "ng test"
   },
