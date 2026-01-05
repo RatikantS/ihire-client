@@ -10,4 +10,8 @@ export const routes: Routes = [
     path: 'requisitions',
     loadChildren: () => loadRemoteModule('ihire-requisition', './routes').then((m) => m.routes),
   },
+  {
+    path: 'interviews',
+    loadChildren: () => loadRemoteModule('ihire-interview', './routes').then((m) => m.routes),
+  },
 ];

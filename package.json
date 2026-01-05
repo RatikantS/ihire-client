@@ -11,7 +11,8 @@
     "start:host": "ng serve ihire-host",
     "start:dashboard": "ng serve ihire-dashboard",
     "start:requisition": "ng serve ihire-requisition",
-    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\" \"npm run start:requisition\"",
+    "start:interview": "ng serve ihire-interview",
+    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\" \"npm run start:requisition\" \"npm run start:interview\"",
     "build": "ng build",
     "test": "ng test"
   },

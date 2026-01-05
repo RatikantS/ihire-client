@@ -38,6 +38,12 @@
     },
     {
       "path": "./apps/ihire-requisition/tsconfig.spec.json"
+    },
+    {
+      "path": "./apps/ihire-interview/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/ihire-interview/tsconfig.spec.json"
     }
   ]
 }
