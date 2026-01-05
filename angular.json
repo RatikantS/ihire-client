@@ -4,7 +4,7 @@
   "cli": {
     "packageManager": "npm"
   },
-  "newProjectRoot": "apps",
+  "newProjectRoot": "projects",
   "projects": {
     "ihire-host": {
       "projectType": "application",
@@ -1002,6 +1002,32 @@
           "defaultConfiguration": "development",
           "options": {
             "port": 4209
+          }
+        }
+      }
+    },
+    "ihire-ui": {
+      "projectType": "library",
+      "root": "libs/ihire-ui",
+      "sourceRoot": "libs/ihire-ui/src",
+      "prefix": "ih",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ihire-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/ihire-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "libs/ihire-ui/tsconfig.spec.json"
           }
         }
       }

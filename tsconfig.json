@@ -2,6 +2,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
+    "paths": {
+      "ihire-ui": ["./dist/ihire-ui"]
+    },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -80,6 +83,12 @@
     },
     {
       "path": "./apps/ihire-user/tsconfig.spec.json"
+    },
+    {
+      "path": "./libs/ihire-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "./libs/ihire-ui/tsconfig.spec.json"
     }
   ]
 }
