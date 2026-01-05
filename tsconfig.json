@@ -50,6 +50,12 @@
     },
     {
       "path": "./apps/ihire-talent/tsconfig.spec.json"
+    },
+    {
+      "path": "./apps/ihire-audit/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/ihire-audit/tsconfig.spec.json"
     }
   ]
 }
