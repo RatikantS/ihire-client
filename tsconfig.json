@@ -3,6 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
+      "ihire-core": ["./dist/ihire-core"],
       "ihire-ui": ["./dist/ihire-ui"]
     },
     "noImplicitOverride": true,
@@ -89,6 +90,12 @@
     },
     {
       "path": "./libs/ihire-ui/tsconfig.spec.json"
+    },
+    {
+      "path": "./libs/ihire-core/tsconfig.lib.json"
+    },
+    {
+      "path": "./libs/ihire-core/tsconfig.spec.json"
     }
   ]
 }

@@ -1031,6 +1031,32 @@
           }
         }
       }
+    },
+    "ihire-core": {
+      "projectType": "library",
+      "root": "libs/ihire-core",
+      "sourceRoot": "libs/ihire-core/src",
+      "prefix": "ih",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ihire-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/ihire-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "libs/ihire-core/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "schematics": {
