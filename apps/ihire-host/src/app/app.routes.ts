@@ -26,4 +26,8 @@ export const routes: Routes = [
     path: 'reports',
     loadChildren: () => loadRemoteModule('ihire-report', './routes').then((m) => m.routes),
   },
+  {
+    path: 'onboarding',
+    loadChildren: () => loadRemoteModule('ihire-onboarding', './routes').then((m) => m.routes),
+  },
 ];

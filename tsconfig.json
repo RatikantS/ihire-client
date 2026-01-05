@@ -62,6 +62,12 @@
     },
     {
       "path": "./apps/ihire-report/tsconfig.spec.json"
+    },
+    {
+      "path": "./apps/ihire-onboarding/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/ihire-onboarding/tsconfig.spec.json"
     }
   ]
 }
