@@ -74,6 +74,12 @@
     },
     {
       "path": "./apps/ihire-assessment/tsconfig.spec.json"
+    },
+    {
+      "path": "./apps/ihire-user/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/ihire-user/tsconfig.spec.json"
     }
   ]
 }

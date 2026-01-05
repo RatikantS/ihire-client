@@ -12,6 +12,7 @@ module.exports = withNativeFederation({
     'ihire-report': 'http://localhost:4206/remoteEntry.json',
     'ihire-onboarding': 'http://localhost:4207/remoteEntry.json',
     'ihire-assessment': 'http://localhost:4208/remoteEntry.json',
+    'ihire-user': 'http://localhost:4209/remoteEntry.json',
   },
 
   shared: {

@@ -17,7 +17,8 @@
     "start:report": "ng serve ihire-report",
     "start:onboarding": "ng serve ihire-onboarding",
     "start:assessment": "ng serve ihire-assessment",
-    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\" \"npm run start:requisition\" \"npm run start:interview\" \"npm run start:talent\" \"npm run start:audit\" \"npm run start:report\" \"npm run start:onboarding\" \"npm run start:assessment\"",
+    "start:user": "ng serve ihire-user",
+    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\" \"npm run start:requisition\" \"npm run start:interview\" \"npm run start:talent\" \"npm run start:audit\" \"npm run start:report\" \"npm run start:onboarding\" \"npm run start:assessment\" \"npm run start:user\"",
     "build": "ng build",
     "test": "ng test"
   },
