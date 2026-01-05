@@ -26,6 +26,12 @@
     },
     {
       "path": "./apps/ihire-host/tsconfig.spec.json"
+    },
+    {
+      "path": "./apps/ihire-dashboard/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/ihire-dashboard/tsconfig.spec.json"
     }
   ]
 }

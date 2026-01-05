@@ -8,6 +8,9 @@
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "start": "ng serve",
+    "start:host": "ng serve ihire-host",
+    "start:dashboard": "ng serve ihire-dashboard",
+    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\"",
     "build": "ng build",
     "test": "ng test"
   },
@@ -30,6 +33,7 @@
     "@angular/build": "^21.0.4",
     "@angular/cli": "^21.0.4",
     "@angular/compiler-cli": "^21.0.0",
+    "concurrently": "^9.2.1",
     "jsdom": "^27.1.0",
     "prettier": "^3.7.4",
     "typescript": "~5.9.2",
