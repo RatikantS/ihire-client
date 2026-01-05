@@ -22,4 +22,8 @@ export const routes: Routes = [
     path: 'audit',
     loadChildren: () => loadRemoteModule('ihire-audit', './routes').then((m) => m.routes),
   },
+  {
+    path: 'reports',
+    loadChildren: () => loadRemoteModule('ihire-report', './routes').then((m) => m.routes),
+  },
 ];

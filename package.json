@@ -14,7 +14,8 @@
     "start:interview": "ng serve ihire-interview",
     "start:talent": "ng serve ihire-talent",
     "start:audit": "ng serve ihire-audit",
-    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\" \"npm run start:requisition\" \"npm run start:interview\" \"npm run start:talent\" \"npm run start:audit\"",
+    "start:report": "ng serve ihire-report",
+    "start:all": "concurrently \"npm run start:host\" \"npm run start:dashboard\" \"npm run start:requisition\" \"npm run start:interview\" \"npm run start:talent\" \"npm run start:audit\" \"npm run start:report\"",
     "build": "ng build",
     "test": "ng test"
   },

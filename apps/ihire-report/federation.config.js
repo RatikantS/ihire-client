@@ -1,15 +1,10 @@
 const { withNativeFederation, shareAll } = require('@angular-architects/native-federation/config');
 
 module.exports = withNativeFederation({
-  name: 'ihire-host',
+  name: 'ihire-report',
 
-  remotes: {
-    'ihire-dashboard': 'http://localhost:4201/remoteEntry.json',
-    'ihire-requisition': 'http://localhost:4202/remoteEntry.json',
-    'ihire-interview': 'http://localhost:4203/remoteEntry.json',
-    'ihire-talent': 'http://localhost:4204/remoteEntry.json',
-    'ihire-audit': 'http://localhost:4205/remoteEntry.json',
-    'ihire-report': 'http://localhost:4206/remoteEntry.json',
+  exposes: {
+    './routes': './apps/ihire-report/src/app/app.routes.ts',
   },
 
   shared: {
